@@ -1,0 +1,66 @@
+
+.main-container {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: row;
+}
+
+.square-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 90vh;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch; 
+}
+
+.right-panel {
+    flex: 3;
+}
+
+.right-panel-top {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 2em;
+    font-weight: 700;
+    height: 10vh;
+    border-bottom: 2px solid #258eea;
+}
+
+.reset-button-panel {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    border-right: 2px solid #258eea;
+}
+
+.reset-button-panel > button {
+    color: white;
+    border-radius: 2px;
+    background: #0078e7;
+    padding: .5em 1em;
+    border-color: #0078e7;
+    font-weight: 700;
+}
+
+@media screen and (max-width: 678px) {
+    .main-container {
+        flex-direction: column;
+    }
+    .reset-button-panel {
+        height: 10vh;
+        padding-top: 10px;
+        border: none;
+    }
+    .right-panel-top {
+        justify-content: center;
+        padding-right: unset;
+        text-align: center;
+    }
+    .square-container {
+        height: 80vh;
+    }
+}
